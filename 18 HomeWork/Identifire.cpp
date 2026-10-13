@@ -5,7 +5,7 @@ int main()
 {
     string Name;
     cout << "Etner your name: ";
-    getline(cin,Name);
+    getline(cin, Name);
 
     int Age;
     cout << "Enter your age: ";
@@ -14,11 +14,11 @@ int main()
     string City;
     cout << "Enter your City: ";
     cin.ignore();
-    getline(cin,City);
+    getline(cin, City);
 
     string Country;
     cout << "Enter your Country: ";
-    getline(cin,Country);
+    getline(cin, Country);
 
     float Salary;
     cout << "Enter your Monthly salary: ";
@@ -32,7 +32,6 @@ int main()
     cout << "Are you married: Enter(1/0)\n1 if true and 0 if false: ";
     cin >> Married;
 
-
     cout << "**************************" << endl;
     cout << "Name: " << Name << endl;
     cout << "Age: " << Age << endl;
@@ -45,6 +44,4 @@ int main()
     cout << "**************************" << endl;
 
     return 0;
-
-    
 }
