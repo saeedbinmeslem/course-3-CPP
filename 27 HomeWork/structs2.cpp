@@ -1,6 +1,18 @@
 #include <iostream>
 using namespace std;
 
+enum enGender {Male,Female};
+
+enum enStatus {married,single};
+
+struct stAdress
+{
+    /* data */
+    string streetName;
+    int buildNo;
+    int zipCode;
+};
+
 struct employ
 {
     string name;
@@ -8,8 +20,10 @@ struct employ
     string City;
     string Country;
     float Salary;
-    char Gender;
-    bool status;
+    stAdress Adress;
+    enGender gender;
+    enStatus status;
+
 };
 
 int main()
@@ -17,27 +31,17 @@ int main()
 
     employ saeed;
 
-    cout << "Enter the name: ";
-    getline(cin, saeed.name);
+    saeed.name = "Saeed";
+    saeed.Age = 19;
+    saeed.City = "Mukalla";
+    saeed.Country = "Yemen";
+    saeed.Salary = 1500;
+    saeed.Adress.buildNo = 1352 ;
+    saeed.Adress.streetName = "AL-Mosqbel street";
+    saeed.Adress.zipCode =  1352;
+    saeed.gender = enGender::Male;
+    saeed.status = enStatus::single;
 
-    cout << "Enter the age: ";
-    cin >> saeed.Age;
-
-    cout << "Enter the city: ";
-    cin.ignore();
-    getline(cin, saeed.City);
-
-    cout << "Enter the country: ";
-    getline(cin, saeed.Country);
-
-    cout << "Enter your Salary: ";
-    cin >> saeed.Salary;
-
-    cout << "male or female,(Enter M/F): ";
-    cin >> saeed.Gender;
-
-    cout << "Married or not\nif yes Enter 1, if not Enter 0: ";
-    cin >> saeed.status;
 
     cout << "**************************" << endl;
     cout << "Name: " << saeed.name << endl;
@@ -46,8 +50,11 @@ int main()
     cout << "Country: " << saeed.Country << endl;
     cout << "Monthly Salary: " << saeed.Salary << endl;
     cout << "Yearly Salary: " << saeed.Salary * 12 << endl;
-    cout << "Gender: " << saeed.Gender << endl;
+    cout << "Gender: " << saeed.gender << endl;
     cout << "Married: " << saeed.status << endl;
+    cout << "street name: " << saeed.Adress.streetName << endl;
+    cout << "ZipCode: " << saeed.Adress.zipCode << endl;
+    cout << "building number: " << saeed.Adress.buildNo << endl;
     cout << "**************************" << endl;
 
     return 0;
