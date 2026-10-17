@@ -4,9 +4,11 @@ using namespace std;
 
 void PowerOf234(float number)
 {
-    cout << "Power of 2 is: " << pow(number, 2) << endl;
-    cout << "Power of 3 is: " << pow(number, 3) << endl;
-    cout << "Power of 4 is: " << pow(number, 4) << endl;
+    for (size_t i = 2; i <= 4; i++)
+    {
+        /* code */
+        cout << "Power of " << i << " is: " << pow(number, i) << endl;
+    }
 }
 
 int main()

@@ -33,7 +33,6 @@ int main()
 {
 
     Time time;
-    time.ManyDays = 4;
 
     int seconds;
     cout << "Enter seconds to show how many\ndays,hours,minutes, and seconds include it: ";
